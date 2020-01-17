@@ -102,7 +102,7 @@ const close = document.createElement("button");
 article.classList.add("article");
 dateP.classList.add("date");
 open.classList.add("expandButton");
-close.classList.add("expandButton", "hidden", "close");
+close.classList.add("hidden", "close");
 
 article.append(atitle);
 article.append(dateP);
@@ -121,11 +121,10 @@ content3.textContent = thirdParagraph;
 open.textContent = "expand";
 close.textContent = "X";
 
-close.className = "hidden";
 button.addEventListener("click", event => {
   console.log("clicked", event.target);
   open.classList.toggle("hidden");
-  close.classList.toggle("close");
+  close.classList.toggle("hidden");
   article.classList.toggle("toggled");
 });
 
